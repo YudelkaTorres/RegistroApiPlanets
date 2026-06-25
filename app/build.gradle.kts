@@ -10,7 +10,7 @@ plugins {
 
 android {
     namespace = "edu.ucne.registroapiplanets"
-    compileSdk = 36
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "edu.ucne.registroapiplanets"
@@ -46,6 +46,7 @@ android {
     lint {
         abortOnError = false
         checkReleaseBuilds = false
+        disable += "ObsoleteLintCustomCheck"
     }
 }
 
