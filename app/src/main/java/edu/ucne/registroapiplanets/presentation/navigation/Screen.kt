@@ -2,17 +2,17 @@ package edu.ucne.registroapiplanets.presentation.navigation
 
 import kotlinx.serialization.Serializable
 
-sealed interface Screen {
+sealed class Screen {
 
     @Serializable
-    data object PlanetList : Screen
+    data object PlanetList : Screen()
 
     @Serializable
-    data class PlanetDetail(val id: Int) : Screen
+    data class PlanetDetail(val id: Int) : Screen()
 
     @Serializable
-    data object CharacterList : Screen
+    data object CharacterList : Screen()
 
     @Serializable
-    data class CharacterDetail(val id: Int) : Screen
+    data class CharacterDetail(val id: Int) : Screen()
 }
