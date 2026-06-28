@@ -1,4 +1,4 @@
-package edu.ucne.registroapiplanets.presentation.detail
+package edu.ucne.registroapiplanets.presentation.detail.detailPlanet
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel

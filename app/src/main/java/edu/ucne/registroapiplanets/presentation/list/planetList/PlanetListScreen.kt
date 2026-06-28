@@ -1,4 +1,4 @@
-package edu.ucne.registroapiplanets.presentation.list
+package edu.ucne.registroapiplanets.presentation.list.planetList
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -15,6 +15,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import edu.ucne.registroapiplanets.domain.model.Planet
+import edu.ucne.registroapiplanets.presentation.list.planetList.PlanetListUiState
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
