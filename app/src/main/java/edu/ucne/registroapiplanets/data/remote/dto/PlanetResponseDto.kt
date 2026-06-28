@@ -1,4 +1,4 @@
-package edu.ucne.registroapiplanets.data.remote
+package edu.ucne.registroapiplanets.data.remote.dto
 
 import edu.ucne.registroapiplanets.domain.model.Planet
 
