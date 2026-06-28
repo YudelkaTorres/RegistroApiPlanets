@@ -1,10 +1,12 @@
-package edu.ucne.registroapiplanets.presentation.list
+package edu.ucne.registroapiplanets.presentation.list.planetList
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import edu.ucne.registroapiplanets.data.remote.Resource
 import edu.ucne.registroapiplanets.domain.usecase.GetPlanetsUseCase
+import edu.ucne.registroapiplanets.presentation.list.planetList.PlanetListEvent
+import edu.ucne.registroapiplanets.presentation.list.planetList.PlanetListUiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update

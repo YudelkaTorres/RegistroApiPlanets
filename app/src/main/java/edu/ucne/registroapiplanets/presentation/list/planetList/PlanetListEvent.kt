@@ -1,4 +1,4 @@
-package edu.ucne.registroapiplanets.presentation.list
+package edu.ucne.registroapiplanets.presentation.list.planetList
 
 sealed interface PlanetListEvent {
 

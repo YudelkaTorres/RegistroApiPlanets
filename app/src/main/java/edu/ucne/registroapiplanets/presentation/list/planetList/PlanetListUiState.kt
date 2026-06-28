@@ -1,4 +1,4 @@
-package edu.ucne.registroapiplanets.presentation.list
+package edu.ucne.registroapiplanets.presentation.list.planetList
 
 import edu.ucne.registroapiplanets.domain.model.Planet
 
