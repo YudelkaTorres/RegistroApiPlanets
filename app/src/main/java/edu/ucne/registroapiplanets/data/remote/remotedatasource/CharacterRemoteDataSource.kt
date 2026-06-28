@@ -1,23 +1,25 @@
 package edu.ucne.registroapiplanets.data.remote.remotedatasource
 
+import edu.ucne.registroapiplanets.data.remote.dto.CharacterDto
+import edu.ucne.registroapiplanets.data.remote.dto.CharacterResponseDto
 import edu.ucne.registroapiplanets.data.remote.DragonBallApi
-import edu.ucne.registroapiplanets.data.remote.dto.PlanetDto
-import edu.ucne.registroapiplanets.data.remote.dto.PlanetResponseDto
 import retrofit2.HttpException
 import javax.inject.Inject
 
-class PlanetRemoteDataSource @Inject constructor(
+class CharacterRemoteDataSource @Inject constructor(
     private val api: DragonBallApi
-) {
-    suspend fun getPlanets(
+){
+    suspend fun getCharacters(
         page: Int,
         limit: Int,
-        name: String?
-    ): Result<PlanetResponseDto> {
+        name: String?,
+        gender: String?,
+        race: String?,
+    ): Result<CharacterResponseDto> {
         try {
-            val response = api.getPlanets(page, limit, name)
+            val response = api.getCharacters(page, limit, name, gender, race)
             if (!response.isSuccessful) {
-               return Result.failure(Exception("Error de red ${response.code()}"))
+                return Result.failure(Exception("Error de red ${response.code()}"))
             }
             return Result.success(response.body()!!)
         } catch (e: HttpException) {
@@ -27,9 +29,9 @@ class PlanetRemoteDataSource @Inject constructor(
         }
     }
 
-    suspend fun getPlanetDetail(id: Int): Result<PlanetDto> {
-         try {
-            val response = api.getPlanetDetail(id)
+    suspend fun getCharacterDetail(id: Int): Result<CharacterDto> {
+        try {
+            val response = api.getCharacterDetail(id)
             if (!response.isSuccessful) {
                 return Result.failure(Exception("Error de red ${response.code()}"))
             }
